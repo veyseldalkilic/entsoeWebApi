@@ -1,0 +1,7 @@
+Acknowledgement_MarketDocument_Reason:
+  type: object
+  properties:
+    code:
+      type: string
+    text:
+      type: string

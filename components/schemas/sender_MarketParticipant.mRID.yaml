@@ -1,0 +1,9 @@
+sender_MarketParticipant.mRID:
+    type: object
+    properties:
+      codingScheme:
+        type: string
+        xml:
+          attribute: true
+      v:
+        type: string

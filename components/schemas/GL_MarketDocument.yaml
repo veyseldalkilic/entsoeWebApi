@@ -1,0 +1,103 @@
+GL_MarketDocument:
+  type: object
+  properties:
+    xmlns:
+      type: string
+      example: urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0
+      xml:
+        attribute: true
+    mRID:
+      type: string
+    revisionNumber:
+      type: integer
+    type:
+      type: string
+    processType:
+      type: string
+    sender_MarketParticipant.mRID:
+      $ref: 'sender_MarketParticipant.mRID.yaml'
+    sender_MarketParticipant.marketRole.type:
+      type: string
+    receiver_MarketParticipant.mRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    receiver_MarketParticipant.marketRole.type:
+      type: string
+    received_MarketDocument.createdDateTime:
+      type: string
+    createdDateTime:
+      type: string
+    time_Period.timeInterval:
+      required:
+        - end
+        - start
+      type: object
+      properties:
+        start:
+          type: string
+        end:
+          type: string
+    Timeseries:
+      type: array
+      items:
+        type: object
+        properties:
+          mRID:
+            type: string
+          businessType:
+            type: string
+          objectAggregation:
+            type: string
+          registeredResource.mRID:
+            type: string
+          registeredResource.name:
+            type: string
+          inBiddingZone_Domain.mRID:
+            type: object
+            properties:
+              codingSchema:
+                type: string
+                xml:
+                  attribute: true
+              v:
+                type: string
+          outBiddingZone_Domain.mRID:
+            type: object
+            properties:
+              codingSchema:
+                type: string
+                xml:
+                  attribute: true
+              v:
+                type: string
+          quantity_Measure_Unit.name:
+            type: string
+          curveType:
+            type: string
+          period:
+            type: object
+            properties:
+              timeInterval:
+                type: object
+                properties:
+                  start:
+                    type: string
+                  end:
+                    type: string
+              resolution:
+                type: string
+              Point:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    position:
+                      type: integer
+                    quantity:
+                      type: integer

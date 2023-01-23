@@ -1,4 +1,4 @@
-Acknowledgement_MarketDocument:
+Acknowledgement_MarketDocument: 
   type: object
   properties:
     xmlns:
@@ -34,4 +34,9 @@ Acknowledgement_MarketDocument:
     received_MarketDocument.createdDateTime:
       type: string
     Reason:
-      type: string
+      type: object
+      properties:
+        code:
+          type: string
+        text:
+          type: string
