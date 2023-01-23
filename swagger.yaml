@@ -1305,27 +1305,7 @@ components:
   schemas:
     Acknowledgement_MarketDocument:
       type: object
-      properties:
-        xmlns:
-          type: string
-          xml:
-            attribute: true
-        mRID:
-          $ref: '#/components/schemas/mRID'
-        createdDateTime:
-          type: string
-        sender_MarketParticipant.mRID:
-          $ref: '#/components/schemas/SenderMarketParticipantMRID'
-        sender_MarketParticipant.marketRole.type:
-          $ref: '#/components/schemas/sender_MarketParticipant.marketRole.type'
-        receiver_MarketParticipant.mRID:
-          $ref: '#/components/schemas/ReceiverMarketParticipantMRID'
-        receiver_MarketParticipant.marketRole.type:
-          $ref: '#/components/schemas/receiver_MarketParticipant.marketRole.type'
-        received_MarketDocument.createdDateTime:
-          type: string
-        Reason:
-          $ref: '#/components/schemas/Acknowledgement_MarketDocument_Reason'
+      $ref: 'components/Acknowledgement_MarketDocument.yaml'
     GL_MarketDocument:
       required:
       - GL_MarketDocument

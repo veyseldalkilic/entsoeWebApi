@@ -1,0 +1,9 @@
+Acknowledgement_MarketDocument:
+  type: object
+  properties:
+    xmlns:
+      type: string
+      xml:
+        attribute: true
+    received_MarketDocument.createdDateTime:
+      type: string
