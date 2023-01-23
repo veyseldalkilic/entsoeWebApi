@@ -5,5 +5,33 @@ Acknowledgement_MarketDocument:
       type: string
       xml:
         attribute: true
+    mRID:
+      type: string
+    createdDateTime:
+      type: string
+    sender_MarketParticipant.mRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    sender_MarketParticipant.marketRole.type:
+      type: string
+    receiver_MarketParticipant.mRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    receiver_MarketParticipant.marketRole.type:
+      type: string
     received_MarketDocument.createdDateTime:
+      type: string
+    Reason:
       type: string
