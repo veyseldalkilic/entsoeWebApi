@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="dist/index.css" />
     <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -16,4 +17,15 @@
     <script src="dist/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
     <script src="dist/swagger-initializer.js" charset="UTF-8"> </script>
   </body>
+  <script>
+    var animation = bodymovin.loadAnimation({
+       // animationData: { /* ... */ },
+       container: document.getElementById('emo01'), // required
+       path: 'emo01.json', // required
+       renderer: 'svg', // required
+       loop: true, // optional
+       autoplay: true, // optional
+       name: "Demo Animation", // optional
+    });
+ </script>
 </html>
