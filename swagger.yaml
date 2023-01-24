@@ -80,13 +80,169 @@ paths:
             application/xml:
               schema:
                 $ref: 'components/schemas/GL_MarketDocument.yaml#/GL_MarketDocument'
+              examples:
+                GL_MarketDocument:
+                  $ref: '#/components/examples/GL_MarketDocument'
         "400":
           description: Invalid query attributes or parameters
           content:
             application/xml:
               schema:
                 $ref: 'components/schemas/Acknowledgement_MarketDocument.yaml#/Acknowledgement_MarketDocument'
+              examples:
+                Acknowledgement_MarketDocument:
+                  $ref: '#/components/examples/Acknowledgement_MarketDocument_400'
+        "401":
+          description: Unauthorized. Missing or invalid security token
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Acknowledgement_MarketDocument'
+              examples:
+                Acknowledgement_MarketDocument:
+                  $ref: '#/components/examples/Acknowledgement_MarketDocument_401'
+        "429":
+          description: Too many requests - max allowed 400 per minutes from each unique IP
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Acknowledgement_MarketDocument'
+              examples:
+                Acknowledgement_MarketDocument:
+                  $ref: '#/components/examples/Acknowledgement_MarketDocument_429'
 components:
+  schemas:
+    Acknowledgement_MarketDocument:
+      type: object
+      $ref: 'components/schemas/Acknowledgement_MarketDocument.yaml'
+    GL_MarketDocument: 
+      type: object
+      $ref: 'components/schemas/GL_MarketDocument.yaml'
+    SenderMarketParticipantMRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    ReceiverMarketParticipantMRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    time_Period.timeInterval:
+      required:
+      - end
+      - start
+      type: object
+      properties:
+        start:
+          type: string
+        end:
+          type: string
+    Timeseries:
+      type: array
+      items:
+        $ref: '#/components/schemas/Timeseries_inner'
+    outBiddingZone_Domain.mRID:
+      type: object
+      properties:
+        codingSchema:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    inBiddingZone_Domain.mRID:
+      type: object
+      properties:
+        codingSchema:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    joe:
+      type: object
+      properties:
+        psrType:
+          type: string
+        voltage_PowerSystemResources.highVoltageLimit:
+          $ref: '#/components/schemas/joe_voltage_PowerSystemResources.highVoltageLimit'
+    period:
+      type: object
+      properties:
+        timeInterval:
+          $ref: '#/components/schemas/period_timeInterval'
+        resolution:
+          type: string
+        Point:
+          type: array
+          items:
+            $ref: '#/components/schemas/period_Point'
+    mRID:
+      type: string
+    sender_MarketParticipant.marketRole.type:
+      type: string
+    receiver_MarketParticipant.marketRole.type:
+      type: string
+    Acknowledgement_MarketDocument_Reason:
+      type: object
+      properties:
+        code:
+          type: string
+        text:
+          type: string
+    Timeseries_inner:
+      type: object
+      properties:
+        mRID:
+          type: string
+        businessType:
+          type: string
+        objectAggregation:
+          type: string
+        registeredResource.mRID:
+          type: string
+        registeredResource.name:
+          type: string
+        inBiddingZone_Domain.mRID:
+          $ref: '#/components/schemas/inBiddingZone_Domain.mRID'
+        outBiddingZone_Domain.mRID:
+          $ref: '#/components/schemas/outBiddingZone_Domain.mRID'
+        quantity_Measure_Unit.name:
+          type: string
+        curveType:
+          type: string
+        period:
+          $ref: '#/components/schemas/period'
+    joe_voltage_PowerSystemResources.highVoltageLimit:
+      type: object
+      properties:
+        highVoltageLimit:
+          type: string
+          xml:
+            attribute: true
+    period_timeInterval:
+      type: object
+      properties:
+        start:
+          type: string
+        end:
+          type: string
+    period_Point:
+      type: object
+      properties:
+        position:
+          type: integer
+        quantity:
+          type: integer
   parameters:
     securityToken:
       name: securityToken
