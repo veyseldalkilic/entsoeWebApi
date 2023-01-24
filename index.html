@@ -8,15 +8,25 @@
     <link rel="stylesheet" type="text/css" href="dist/index.css" />
     <link rel="icon" type="image/png" href="dist/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="dist/favicon-16x16.png" sizes="16x16" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js" integrity="sha512-HDCfX3BneBQMfloBfluMQe6yio+OfXnbKAbI0SnfcZ4YfZL670nc52Aue1bBhgXa+QdWsBdhMVR2hYROljf+Fg==" crossorigin="anonymous"></script>
+    <style>
+      #emo01 {
+        position: fixed;
+        margin: 0 auto;
+        width: 150px;
+        height: 150px;
+        background: transparent;
+      }
+    </style>
   </head>
 
   <body>
+    <div id='emo01'></div>
     <div id="swagger-ui"></div>
     <script src="dist/swagger-ui-bundle.js" charset="UTF-8"> </script>
     <script src="dist/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
     <script src="dist/swagger-initializer.js" charset="UTF-8"> </script>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.7/lottie.min.js"></script>
   <script>
     var animation = bodymovin.loadAnimation({
        // animationData: { /* ... */ },
