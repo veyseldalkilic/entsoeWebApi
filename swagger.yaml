@@ -2,10 +2,10 @@
 openapi: 3.0.0
 info:
   title: Entso-e Transparency Restful API
-  description: "## &#128679; (Beta version) \n\n # &#128226; You asked for it and we listened! \n With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. This documentation is prepared according to openAPI specification (OAS) standards.  \n\n # &#10071; Please read before going any further:\n\n * In order to separate the data items we have introduced so-called resource names (i.e. '/api<b>/6.1.A</b>'). This made us stick with the OAS standards. Please keep in mind that we have only one resource ('/api') and remove the trailing part (i.e. '/6.1.A') while making a http request. \n * This document is only covering GET method since it is very commonly used / preferred by end users. \n\n # &#128071; We would like to hear from you."
+  description: "## &#128679; (Beta version) \n\n # &#128226; You asked for it and we listened! \n With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. This documentation is prepared according to openAPI 3.0.0 specification (OAS) standards.  \n\n # &#10071; Please read before going any further:\n\n * Number of data items keep growing under Transparency Platform. Contrary to the general approach there is only one resource (/api) and requesting different data items is done via sending different parameters. To comply with OAS we needed to introduce so-called resource names (i.e. '/api<b>/6.1.A</b>'). Please do not forget to remove the trailing part (i.e. '<b>/6.1.A</b>') while making a http request. \n * This document is only covering GET method since it is very commonly used / preferred by end users. \n\n # &#128071;&#128071;&#128071; We would like to hear from you."
   contact:
     name: Transparency Team
-    url: https://web-api.tp.entsoe.eu
+    url: https://transparency.entsoe.eu
     email: transparency@entsoe.eu
   version: "0.1"
 servers:
@@ -118,131 +118,6 @@ components:
     GL_MarketDocument: 
       type: object
       $ref: 'components/schemas/GL_MarketDocument.yaml'
-    SenderMarketParticipantMRID:
-      type: object
-      properties:
-        codingScheme:
-          type: string
-          xml:
-            attribute: true
-        v:
-          type: string
-    ReceiverMarketParticipantMRID:
-      type: object
-      properties:
-        codingScheme:
-          type: string
-          xml:
-            attribute: true
-        v:
-          type: string
-    time_Period.timeInterval:
-      required:
-      - end
-      - start
-      type: object
-      properties:
-        start:
-          type: string
-        end:
-          type: string
-    Timeseries:
-      type: array
-      items:
-        $ref: '#/components/schemas/Timeseries_inner'
-    outBiddingZone_Domain.mRID:
-      type: object
-      properties:
-        codingSchema:
-          type: string
-          xml:
-            attribute: true
-        v:
-          type: string
-    inBiddingZone_Domain.mRID:
-      type: object
-      properties:
-        codingSchema:
-          type: string
-          xml:
-            attribute: true
-        v:
-          type: string
-    joe:
-      type: object
-      properties:
-        psrType:
-          type: string
-        voltage_PowerSystemResources.highVoltageLimit:
-          $ref: '#/components/schemas/joe_voltage_PowerSystemResources.highVoltageLimit'
-    period:
-      type: object
-      properties:
-        timeInterval:
-          $ref: '#/components/schemas/period_timeInterval'
-        resolution:
-          type: string
-        Point:
-          type: array
-          items:
-            $ref: '#/components/schemas/period_Point'
-    mRID:
-      type: string
-    sender_MarketParticipant.marketRole.type:
-      type: string
-    receiver_MarketParticipant.marketRole.type:
-      type: string
-    Acknowledgement_MarketDocument_Reason:
-      type: object
-      properties:
-        code:
-          type: string
-        text:
-          type: string
-    Timeseries_inner:
-      type: object
-      properties:
-        mRID:
-          type: string
-        businessType:
-          type: string
-        objectAggregation:
-          type: string
-        registeredResource.mRID:
-          type: string
-        registeredResource.name:
-          type: string
-        inBiddingZone_Domain.mRID:
-          $ref: '#/components/schemas/inBiddingZone_Domain.mRID'
-        outBiddingZone_Domain.mRID:
-          $ref: '#/components/schemas/outBiddingZone_Domain.mRID'
-        quantity_Measure_Unit.name:
-          type: string
-        curveType:
-          type: string
-        period:
-          $ref: '#/components/schemas/period'
-    joe_voltage_PowerSystemResources.highVoltageLimit:
-      type: object
-      properties:
-        highVoltageLimit:
-          type: string
-          xml:
-            attribute: true
-    period_timeInterval:
-      type: object
-      properties:
-        start:
-          type: string
-        end:
-          type: string
-    period_Point:
-      type: object
-      properties:
-        position:
-          type: integer
-        quantity:
-          type: integer
   parameters:
     securityToken:
       name: securityToken
