@@ -1,0 +1,17 @@
+Acknowledgement_MarketDocument:
+  value:
+    xmlns: urn:iec62325351:tc57wg16:451-1:acknowledgementdocument:7:0
+    mRID: be3917c7-0704-4
+    createdDateTime: 2016-03-30T10:45:36Z
+    sender_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    sender_MarketParticipant.marketRole.type: A32
+    receiver_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    receiver_MarketParticipant.marketRole.type: A39
+    received_MarketDocument.createdDateTime: 2016-03-30T10:45:35Z
+    Reason:
+      code: "-"
+      text: Too many requests - max allowed 400 per minutes from each unique IP
