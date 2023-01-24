@@ -1,0 +1,10 @@
+outBiddingZone_Domain:
+  name: outBiddingZone_Domain
+  in: query
+  description: The possible EIC codes can be found at https://www.entsoe.eu/data/energy-identification-codes-eic/eic-approved-codes/ url. Please select 'EIC Type Code' as 'All Codes' and filter 'FUNCTION' as 'Bidding Zone'
+  required: true
+  style: form
+  explode: true
+  schema:
+    type: string
+  example: 10YCZ-CEPS-----N

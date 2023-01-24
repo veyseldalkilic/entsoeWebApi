@@ -1,0 +1,10 @@
+securityToken:
+  name: securityToken
+  in: query
+  description: In order to get web api security token you must first register to the <a href= 'https://transparency.entsoe.eu'>https://transparency.entsoe.eu</a> website. Then after successfully logging in you must go to 'my account settings' and create a web api security token.
+  required: true
+  style: form
+  explode: true
+  schema:
+    type: string
+  example: 1fbe3cd7-0055-4188-bb37-4c6728687251

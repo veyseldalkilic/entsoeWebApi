@@ -1,0 +1,10 @@
+periodStart:
+  name: periodStart
+  in: query
+  description: Time is always expressed in UTC. Pattern is yyyyMMddHHmm
+  required: true
+  style: form
+  explode: true
+  schema:
+    type: string
+  example: "201601010000"
