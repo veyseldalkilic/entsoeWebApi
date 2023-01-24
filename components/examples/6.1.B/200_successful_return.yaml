@@ -4,7 +4,7 @@ GL_MarketDocument:
     mRID: 0333ff4c65a847279e71ac5aabe1485e
     revisionNumber: "1"
     type: A65
-    process.processType: A16
+    process.processType: A01
     sender_MarketParticipant.mRID:
       codingScheme: A01
       v: 10X1001A1001A450

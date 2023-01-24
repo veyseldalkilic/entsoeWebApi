@@ -1,0 +1,11 @@
+processType:
+  name: processType
+  in: query
+  description: The process type identifies the type of processing to be carried out on the information. For each data item this value might change.
+  required: true
+  style: form
+  explode: true
+  schema:
+    type: string
+    enum:
+    - A01
