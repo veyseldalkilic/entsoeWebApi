@@ -80,7 +80,21 @@ GL_MarketDocument:
             type: string
           curveType:
             type: string
-          period:
+          MktPSRType:
+            type: object
+            properties:
+              psrType:
+                type: string
+              voltage_PowerSystemResources.highVoltageLimit:
+                type: object
+                properties:
+                  unit:
+                    type: string
+                    xml:
+                      attribute: true
+                  v:
+                    type: string
+          Period:
             type: object
             properties:
               timeInterval:
@@ -98,6 +112,6 @@ GL_MarketDocument:
                   type: object
                   properties:
                     position:
-                      type: integer
+                      type: number
                     quantity:
-                      type: integer
+                      type: number
