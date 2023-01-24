@@ -17,19 +17,23 @@
     <script src="dist/swagger-initializer.js" charset="UTF-8"> </script>
     <script src="lottie.min.js"></script>
     <script>
+        var delayInMilliseconds = 3000; //1 second
 
-      window.onload = function() { 
-        console.log(document.getElementById("emo01"));
-        var animation = bodymovin.loadAnimation({
-          // animationData: { /* ... */ },
-          container: document.getElementById('emo01'), // required
-          path: 'emo01.json', // required
-          renderer: 'svg', // required
-          loop: true, // optional
-          autoplay: true, // optional
-          name: "Demo Animation", // optional
-        });
-      };
+        setTimeout(function() {
+          console.log(document.getElementById("emo01"));
+          var animation = bodymovin.loadAnimation({
+            // animationData: { /* ... */ },
+            container: document.getElementById('emo01'), // required
+            path: 'emo01.json', // required
+            renderer: 'svg', // required
+            loop: true, // optional
+            autoplay: true, // optional
+            name: "Demo Animation", // optional
+          });
+        }, delayInMilliseconds);
+
+        
+
 
     </script>
     </body>
