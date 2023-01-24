@@ -7,7 +7,7 @@ info:
     name: Transparency Team
     url: https://transparency.entsoe.eu
     email: transparency@entsoe.eu
-  version: "0.1"
+  version: "0.1.1"
 servers:
 - url: https://web-api.tp.entsoe.eu
 paths:
