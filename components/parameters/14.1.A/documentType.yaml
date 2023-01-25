@@ -8,4 +8,4 @@ documentType:
   schema:
     type: string
     enum:
-    - A65
+    - A68

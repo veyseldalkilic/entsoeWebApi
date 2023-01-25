@@ -23,6 +23,8 @@ paths:
     $ref: 'components/paths/path_6.1.E.yaml#/path_6.1.E'
   /api/8.1:
     $ref: 'components/paths/path_8.1.yaml#/path_8.1'
+  /api/14.1.A:
+    $ref: 'components/paths/path_14.1.A.yaml#/path_14.1.A'
 components:
   schemas:
     Acknowledgement_MarketDocument:
