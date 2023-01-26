@@ -2,7 +2,7 @@
 openapi: 3.0.0
 info:
   title: Entso-e Transparency Restful API
-  description: " # <img src='images/confetti50.gif'> You asked for it and we listened! \n * With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. \n\n * This documentation is prepared according to openAPI 3.0.0 specification (OAS) standards. \n\n # <img src='images/document50.gif'><a href='docs/transparency_platform_how_to_get_security_token.pdf' target='_blank'> How to get security token</a> \n\n # <img src='images/error50.gif'><a href='docs/transparency_platform_web_api_new_documentation_introduction.pdf' target='_blank'> Please read before start</a> \n\n # <img src='images/mail50.gif'> We would like to hear from you.\n\n * Please do not hesitate to reach us via e-mail and give feedback."
+  description: " # <img src='images/confetti50.gif'> You asked for it and we listened! \n * With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. \n\n * This documentation is prepared according to openAPI 3.0.0 specification (OAS) standards. \n # <img src='images/document50.gif'><a href='docs/transparency_platform_how_to_get_security_token.pdf' target='_blank'> How to get security token</a> \n # <img src='images/error50.gif'><a href='docs/transparency_platform_web_api_new_documentation_introduction.pdf' target='_blank'> Please read before start</a> \n\n # <img src='images/mail50.gif'> We would like to hear from you.\n\n * Please do not hesitate to reach us via e-mail and give feedback."
   contact:
     name: Transparency Team
     url: https://transparency.entsoe.eu
