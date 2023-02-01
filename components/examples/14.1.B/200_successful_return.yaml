@@ -1,0 +1,57 @@
+GL_MarketDocument:
+  value:
+    xmlns: urn:iec62325.351:tc57wg16:451-6:generationloaddocument:3:0
+    mRID: 0333ff4c65a847279e71ac5aabe1485e
+    revisionNumber: "1"
+    type: A71
+    process.processType: A33
+    sender_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    sender_MarketParticipant.marketRole.type: A32
+    receiver_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    receiver_MarketParticipant.marketRole.type: A33
+    createdDateTime: '2016-03-30T10:45:36Z'
+    time_Period.timeInterval:
+      start: 2015-12-31T23:00Z
+      end: 2016-12-31T23:00Z
+    Timeseries:
+    - mRID: "1"
+      businessType: A37
+      objectAggregation: A06
+      inBiddingZone_Domain.mRID:
+        codingScheme: A01
+        v: 10YCZ-CEPS-----N
+      quantity_Measure_Unit.name: MAW
+      curveType: A01
+      MktPSRType:
+        psrType: B01
+        voltage_PowerSystemResources.highVoltageLimit:
+          unit: KVT
+          v: 22
+      Period:
+        timeInterval:
+          start: 2015-12-31T23:00Z
+          end: 2015-12-31T23:00Z
+        resolution: PT60M
+        Point:
+        - position: 1
+          quantity: 100
+    - mRID: "2"
+      businessType: A61
+      objectAggregation: A01
+      inBiddingZone_Domain.mRID:
+        codingScheme: A01
+        v: 10YCZ-CEPS-----N
+      quantity_Measure_Unit.name: MAW
+      curveType: A01
+      Period:
+        timeInterval:
+          start: 2015-12-31T23:00Z
+          end: 2015-12-31T23:00Z
+        resolution: PT60M
+        Point:
+        - position: 1
+          quantity: 100

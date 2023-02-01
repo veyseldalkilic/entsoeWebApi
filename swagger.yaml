@@ -33,6 +33,10 @@ paths:
     $ref: 'components/paths/path_16.1.A.yaml#/path_16.1.A'
   /api/14.1.C:
     $ref: 'components/paths/path_14.1.C.yaml#/path_14.1.C'
+  /api/14.1.D:
+    $ref: 'components/paths/path_14.1.D.yaml#/path_14.1.D'
+  /api/14.1.B:
+    $ref: 'components/paths/path_14.1.B.yaml#/path_14.1.B'
 components:
   schemas:
     Acknowledgement_MarketDocument:

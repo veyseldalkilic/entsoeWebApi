@@ -106,6 +106,15 @@ GL_MarketDocument:
                         type: string
                   name:
                     type: string
+              voltage_PowerSystemResources.highVoltageLimit:
+                type: object
+                properties:
+                  unit:
+                    type: string
+                    xml:
+                      attribute: true
+                  v:
+                    type: string
           Period:
             type: object
             properties:

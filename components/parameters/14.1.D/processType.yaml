@@ -8,4 +8,6 @@ processType:
   schema:
     type: string
     enum:
-    - A16
+    - A01
+    - A40
+    - A94
