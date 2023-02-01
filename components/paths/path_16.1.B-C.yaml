@@ -7,7 +7,7 @@ path_16.1.B-C:
     - $ref: '../parameters/securityToken.yaml#/securityToken'
     - $ref: '../parameters/16.1.B-C/documentType.yaml#/documentType'
     - $ref: '../parameters/16.1.B-C/processType.yaml#/processType'
-    - $ref: '../parameters/outBiddingZone_Domain.yaml#/outBiddingZone_Domain'
+    - $ref: '../parameters/in_Domain.yaml#/in_Domain'
     - $ref: '../parameters/periodStart.yaml#/periodStart'
     - $ref: '../parameters/periodEnd.yaml#/periodEnd'
     responses:

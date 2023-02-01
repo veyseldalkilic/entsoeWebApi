@@ -22,12 +22,20 @@ GL_MarketDocument:
       businessType: A91
       objectAggregation: A01
       inBiddingZone_Domain.mRID:
-        codingSchema: A01
+        codingScheme: A01
         v: 10YCZ-CEPS-----N
+      registeredResource.mRID:
+        codingScheme: A01
+        v: 27W-PU-ECHV----Y
       quantity_Measure_Unit.name: MAW
       curveType: A01
       MktPSRType:
         psrType: B01
+        PowerSystemResources:
+          mRID: 
+            codingScheme: A01
+            v: 27W-GU-ECHVG1--C
+          name: ECHV_G1____
       Period:
         timeInterval:
           start: 2015-12-31T23:00Z
@@ -40,7 +48,7 @@ GL_MarketDocument:
       businessType: A61
       objectAggregation: A01
       inBiddingZone_Domain.mRID:
-        codingSchema: A01
+        codingScheme: A01
         v: 10YCZ-CEPS-----N
       quantity_Measure_Unit.name: MAW
       curveType: A01

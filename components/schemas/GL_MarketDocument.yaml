@@ -55,13 +55,20 @@ GL_MarketDocument:
           objectAggregation:
             type: string
           registeredResource.mRID:
-            type: string
+            type: object
+            properties:
+              codingScheme:
+                type: string
+                xml:
+                  attribute: true
+              v:
+                type: string
           registeredResource.name:
             type: string
           inBiddingZone_Domain.mRID:
             type: object
             properties:
-              codingSchema:
+              codingScheme:
                 type: string
                 xml:
                   attribute: true
@@ -70,7 +77,7 @@ GL_MarketDocument:
           outBiddingZone_Domain.mRID:
             type: object
             properties:
-              codingSchema:
+              codingScheme:
                 type: string
                 xml:
                   attribute: true
@@ -85,14 +92,19 @@ GL_MarketDocument:
             properties:
               psrType:
                 type: string
-              voltage_PowerSystemResources.highVoltageLimit:
+              PowerSystemResources:
                 type: object
                 properties:
-                  unit:
-                    type: string
-                    xml:
-                      attribute: true
-                  v:
+                  mRID:
+                    type: object
+                    properties:
+                      codingScheme:
+                        type: string
+                        xml:
+                          attribute: true
+                      v:
+                        type: string
+                  name:
                     type: string
           Period:
             type: object
