@@ -2,7 +2,7 @@
 openapi: 3.0.0
 info:
   title: Entso-e Transparency Restful API
-  description: " # <img src='images/confetti50.gif'> You asked for it and we listened! \n * With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. \n\n * This documentation is prepared according to openAPI 3.0.0 specification (OAS) standards. \n\n * Please check out our knowledge base <a href='' target='_blank'> articles </a> to have some insights before you get started. \n\n # <img src='images/mail50.gif'> We would like to hear from you.\n\n * Please do not hesitate to reach us via e-mail and give feedback."
+  description: " # <img src='images/confetti50.gif'> You asked for it and we listened! \n * With this document our aim is to provide a developer-friendly technical documentation for Entso-e Transparency Platform Restful API. \n\n * This documentation is prepared according to openAPI 3.0.0 specification (OAS) standards. \n\n * Please check out our knowledge base <a href='https://transparencyplatform.zendesk.com/hc/en-us/sections/12783116987028-Web-API' target='_blank'> articles </a> to have some insights before you get started. \n\n # <img src='images/mail50.gif'> We would like to hear from you.\n\n * Please do not hesitate to reach us via e-mail and give feedback."
   contact:
     name: Transparency Team
     url: https://transparency.entsoe.eu
