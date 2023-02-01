@@ -22,7 +22,7 @@ GL_MarketDocument:
       businessType: A60
       objectAggregation: A01
       outBiddingZone_Domain.mRID:
-        codingSchema: A01
+        codingScheme: A01
         v: 10YCZ-CEPS-----N
       quantity_Measure_Unit.name: MAW
       curveType: A01
@@ -44,7 +44,7 @@ GL_MarketDocument:
       businessType: A61
       objectAggregation: A01
       outBiddingZone_Domain.mRID:
-        codingSchema: A01
+        codingScheme: A01
         v: 10YCZ-CEPS-----N
       quantity_Measure_Unit.name: MAW
       curveType: A01
