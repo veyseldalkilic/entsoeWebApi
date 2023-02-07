@@ -1,0 +1,8 @@
+1- Copy path.yaml file 
+2- change data item number (multiple places)
+3- Copy description from DDD document
+4- Copy url from previous user Guide
+5- Copy parameters folder and fix their definitions according to the urls
+6- Please check if input parameters are correct
+7- Copy example set 
+8- Change example set

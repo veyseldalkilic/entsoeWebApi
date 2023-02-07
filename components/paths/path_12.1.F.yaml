@@ -1,0 +1,50 @@
+path_12.1.F:
+  get:
+    tags:
+    - 12.1.F Scheduled Commercial Exchanges
+    description: "# &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#9757; /api<s>/12.1.F</s>    \n For every market time unit and per direction between bidding zones the total scheduled commercial exchanges from explicit and implicit allocations will be published. Total scheduled commercial exchanges means aggregated schedules, in MW per direction and border (E.g.: between two bidding zones) and per market time unit for all previous time horizons (yearly, monthly, quarterly, weekly, daily, intra-Day) corresponding to explicit allocations after each nominations process and implicit allocation. Intraday and day-ahead values shall be published separately: The value published for the day ahead time horizon consists of commercial exchanges in aggregated form from the following allocations: yearly, monthly, quarterly, weekly and daily. The value published for the intraday time horizon consists of commercial exchanges in aggregated form from the following allocations: yearly, monthly, and quarterly, weekly, daily and intraday. Time interval is one day and resolution is market time unit. The above mentioned values will be published after the day ahead cut off time and, if applicable, will be updated no later than two hours after each intra-day nomination process. Schedules for remedial actions, exchange of balancing energy, emergency assistance and unintended flows shall be excluded from the published values  \n\n <b>Example web browser get method (replace &#128071;MYTOKEN with yours)</b> \n\n <a target='_blank' href=\"https://web-api.tp.entsoe.eu/api?securityToken=MYTOKEN&documentType=A09&in_Domain=10YCZ-CEPS-----N&out_Domain=10YSK-SEPS-----K&contract_MarketAgreement.Type=A05&periodStart=202212012300&periodEnd=202212022300\">https://web-api.tp.entsoe.eu/api?securityToken=MYTOKEN&documentType=A09&in_Domain=10YCZ-CEPS-----N&out_Domain=10YSK-SEPS-----K&contract_MarketAgreement.Type=A05&periodStart=202212012300&periodEnd=202212022300</a>"
+    parameters:
+    - $ref: '../parameters/securityToken.yaml#/securityToken'
+    - $ref: '../parameters/12.1.F/documentType.yaml#/documentType'
+    - $ref: '../parameters/12.1.F/processType.yaml#/processType'
+    - $ref: '../parameters/in_Domain.yaml#/in_Domain'
+    - $ref: '../parameters/out_Domain.yaml#/out_Domain'
+    - $ref: '../parameters/periodStart.yaml#/periodStart'
+    - $ref: '../parameters/periodEnd.yaml#/periodEnd'
+    responses:
+      "200":
+        description: Successful response
+        content:
+          application/xml:
+            schema:
+              $ref: '../schemas/Publication_MarketDocument.yaml#/Publication_MarketDocument'
+            examples:
+              Publication_MarketDocument:
+                $ref: '../examples/12.1.F/200_successful_return.yaml#/Publication_MarketDocument'
+      "400":
+        description: Invalid query attributes or parameters
+        content:
+          application/xml:
+            schema:
+              $ref: '../schemas/Acknowledgement_MarketDocument.yaml#/Acknowledgement_MarketDocument'
+            examples:
+              Acknowledgement_MarketDocument:
+                $ref: '../examples/12.1.F/400_invalid_query.yaml#/Acknowledgement_MarketDocument'
+      "401":
+        description: Unauthorized. Missing or invalid security token
+        content:
+          application/xml:
+            schema:
+              $ref: '../schemas/Acknowledgement_MarketDocument.yaml#/Acknowledgement_MarketDocument'
+            examples:
+              Acknowledgement_MarketDocument:
+                $ref: '../examples/12.1.F/401_unauthorized.yaml#/Acknowledgement_MarketDocument'
+      "429":
+        description: Too many requests - max allowed 400 per minutes from each unique IP
+        content:
+          application/xml:
+            schema:
+              $ref: '../schemas/Acknowledgement_MarketDocument.yaml#/Acknowledgement_MarketDocument'
+            examples:
+              Acknowledgement_MarketDocument:
+                $ref: '../examples/12.1.F/429_too_many_requests.yaml#/Acknowledgement_MarketDocument'

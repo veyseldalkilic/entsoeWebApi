@@ -33,6 +33,8 @@ paths:
     $ref: 'components/paths/path_14.1.D.yaml#/path_14.1.D'
   /api/14.1.B:
     $ref: 'components/paths/path_14.1.B.yaml#/path_14.1.B'
+  /api/12.1.F:
+    $ref: 'components/paths/path_12.1.F.yaml#/path_12.1.F'
 components:
   schemas:
     Acknowledgement_MarketDocument:
@@ -41,3 +43,6 @@ components:
     GL_MarketDocument: 
       type: object
       $ref: 'components/schemas/GL_MarketDocument.yaml#/GL_MarketDocument'
+    Publication_MarketDocument: 
+      type: object
+      $ref: 'components/schemas/Publication_MarketDocument.yaml#/Publication_MarketDocument'

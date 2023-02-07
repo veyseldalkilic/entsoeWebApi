@@ -1,0 +1,57 @@
+Publication_MarketDocument:
+  value:
+    xmlns: urn:iec62325.351:tc57wg16:451-3:publicationdocument:7:0
+    mRID: fe966d4cfe1146f6b5566774aab06e34
+    revisionNumber: "1"
+    type: A09
+    sender_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    sender_MarketParticipant.marketRole.type: A32
+    receiver_MarketParticipant.mRID:
+      codingScheme: A01
+      v: 10X1001A1001A450
+    receiver_MarketParticipant.marketRole.type: A33
+    createdDateTime: '2016-03-30T10:45:36Z'
+    period.timeInterval:
+      start: 2015-12-31T23:00Z
+      end: 2016-12-31T23:00Z
+    Timeseries:
+    - mRID: "1"
+      businessType: A06
+      in_Domain.mRID:
+        codingScheme: A01
+        v: 10YCZ-CEPS-----N
+      out_Domain.mRID:
+        codingScheme: A01
+        v: 27W-PU-ECHV----Y
+      contract_MarketAgreement.type: A05
+      quantity_Measure_Unit.name: MAW
+      curveType: A01
+      Period:
+        timeInterval:
+          start: 2015-12-31T23:00Z
+          end: 2015-12-31T23:00Z
+        resolution: PT60M
+        Point:
+        - position: 1
+          quantity: 100
+    - mRID: "2"
+      businessType: A06
+      in_Domain.mRID:
+        codingScheme: A01
+        v: 10YCZ-CEPS-----N
+      out_Domain.mRID:
+        codingScheme: A01
+        v: 27W-PU-ECHV----Y
+      contract_MarketAgreement.type: A05
+      quantity_Measure_Unit.name: MAW
+      curveType: A01
+      Period:
+        timeInterval:
+          start: 2015-12-31T23:00Z
+          end: 2015-12-31T23:00Z
+        resolution: PT60M
+        Point:
+        - position: 1
+          quantity: 100

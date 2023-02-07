@@ -1,0 +1,95 @@
+Publication_MarketDocument:
+  type: object
+  properties:
+    xmlns:
+      type: string
+      example: urn:iec62325.351:tc57wg16:451-3:publicationdocument:7:0
+      xml:
+        attribute: true
+    mRID:
+      type: string
+    revisionNumber:
+      type: integer
+    type:
+      type: string
+    sender_MarketParticipant.mRID:
+      $ref: 'sender_MarketParticipant.mRID.yaml'
+    sender_MarketParticipant.marketRole.type:
+      type: string
+    receiver_MarketParticipant.mRID:
+      type: object
+      properties:
+        codingScheme:
+          type: string
+          xml:
+            attribute: true
+        v:
+          type: string
+    receiver_MarketParticipant.marketRole.type:
+      type: string
+    createdDateTime:
+      type: string
+    period.timeInterval:
+      required:
+        - end
+        - start
+      type: object
+      properties:
+        start:
+          type: string
+        end:
+          type: string
+    Timeseries:
+      type: array
+      items:
+        type: object
+        properties:
+          mRID:
+            type: string
+          businessType:
+            type: string
+          in_Domain.mRID:
+            type: object
+            properties:
+              codingScheme:
+                type: string
+                xml:
+                  attribute: true
+              v:
+                type: string
+          out_Domain.mRID:
+            type: object
+            properties:
+              codingScheme:
+                type: string
+                xml:
+                  attribute: true
+              v:
+                type: string
+          contract_MarketAgreement.type:
+            type: string
+          quantity_Measure_Unit.name:
+            type: string
+          curveType:
+            type: string
+          Period:
+            type: object
+            properties:
+              timeInterval:
+                type: object
+                properties:
+                  start:
+                    type: string
+                  end:
+                    type: string
+              resolution:
+                type: string
+              Point:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    position:
+                      type: number
+                    quantity:
+                      type: number

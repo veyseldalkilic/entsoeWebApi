@@ -1,0 +1,11 @@
+documentType:
+  name: documentType
+  in: query
+  description: The document type describes the principal characteristic of the document. For each data item this value might change.
+  required: true
+  style: form
+  explode: true
+  schema:
+    type: string
+    enum:
+    - A09
